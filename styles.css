@@ -735,6 +735,7 @@ span {
     }
     .title {
         font-size: 42px;
+        margin-inline: 20px;
     }
     .parent {
         display: none;
@@ -818,10 +819,13 @@ span {
         flex-direction: column;
         margin-inline: 20px;
         gap: 0px;
+        padding-inline: 20px;
     }
     .nozomi-logo {
         width:200px;
         height:100px;
     }
+
+
 
 }
