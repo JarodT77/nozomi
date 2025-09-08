@@ -685,6 +685,10 @@ span {
   transform: translateY(-3px);
 }
 
+.nozomi-logo {
+        width:300px;
+        height:200px;
+    }
 @media (max-width: 768px) {
     
     body {
@@ -724,10 +728,10 @@ span {
   }
 
   .hero-title {
-    font-size: 64px;
+    font-size: 48px;
   }
     .hero-text {
-        font-size: 32px;
+        font-size: 28px;
     }
     .title {
         font-size: 42px;
@@ -792,7 +796,7 @@ span {
         font-size: 20px;
     }
     .text-grid-main {
-        font-size: 20px;
+        font-size: 28px;
     }
     .text-gradient {
         font-size: 42px;
@@ -814,6 +818,10 @@ span {
         flex-direction: column;
         margin-inline: 20px;
         gap: 0px;
+    }
+    .nozomi-logo {
+        width:200px;
+        height:100px;
     }
 
 }
