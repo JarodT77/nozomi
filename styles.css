@@ -1,0 +1,819 @@
+/* Burger menu styles */
+.parent-mobile {
+    display: none;
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+.burger span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+
+/* Contact form custom styles */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background: rgba(84,84,84,0.04);
+  border-radius: 40px;
+  padding: 80px 64px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.12), inset 0 0 25px rgba(245,245,245,0.08);
+}
+.contact-form label {
+  font-family: 'SFBold', sans-serif;
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 8px;
+  display: block;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 18px 24px;
+  border-radius: 20px;
+  border: 1.5px solid #63008e;
+  background: transparent;
+  color: white;
+  font-size: 1.35rem;
+  font-family: 'SFRegular', sans-serif;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+width: 600px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff00a6;
+}
+.contact-form .cta-button {
+  margin-top: 12px;
+}
+/* Réduit la taille des SVG dans le slider de la div3 */
+.div3 .slide img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+/* Progress circle styles */
+.container svg {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.bg {
+  fill: none;
+  stroke: #222;
+  stroke-width: 16;
+}
+.progress {
+  fill: none;
+  stroke: #00b7ff;
+  stroke-width: 16;
+  stroke-linecap: round;
+  stroke-dasharray: 628; /* 2 * PI * r (r=100) */
+  stroke-dashoffset: 628;
+  transition: stroke-dashoffset 1s linear;
+}
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00b7ff;
+  font-size: 2rem;
+  font-family: 'SFBold', sans-serif;
+}
+@font-face {
+  font-family: 'SFRegular';
+  src: url('./fonts/SFPRODISPLAYREGULAR.OTF') format('OTF');
+   
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFBold';
+  src: url('./fonts/SFPRODISPLAYBOLD.OTF') format('OTF');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Appliquer la police au body */
+body {
+    background: radial-gradient(
+        circle at top,
+        rgb(80, 0, 150) 0%,
+        rgb(50, 0, 91) 20%,
+        rgb(35, 0, 64) 50%,
+
+        rgb(20, 20, 20) 100%
+
+
+    );
+        margin: 0px;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Center the SVG visually in the nav without breaking the flex layout */
+.nav-center {
+    position: absolute; /* take it out of the normal flow so left/right items keep space */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* allow clicks to pass through if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* make sure nav is positioned relative so absolute centering works */
+nav {
+    position: relative;
+}
+
+strong {
+      background: linear-gradient(to left, rgb(129, 49, 134) 0%, rgb(240, 124, 255) 30%, rgb(255, 205, 255) 65%, rgb(187, 0, 255) 100%);
+     -webkit-background-clip: text; /* pour Chrome/Safari */
+      -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
+      background-clip: text; /* standard */
+      color: transparent;
+}
+
+.logo {
+    font-family: 'SFBold', sans-serif;
+      background: linear-gradient(to left, rgb(129, 49, 134) 0%, rgb(240, 124, 255) 30%, rgb(255, 205, 255) 65%, rgb(187, 0, 255) 100%);
+     -webkit-background-clip: text; /* pour Chrome/Safari */
+      -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
+      background-clip: text; /* standard */
+      color: transparent; /* sécurité */
+      margin-left: 30px;
+      font-size: 24px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin-right: 30px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'SFRegular', sans-serif;
+    font-size: 18x;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.hero {
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    margin-bottom: 100px;
+}
+
+.hero-title {
+    color: white;
+    font-family: 'SFBold', sans-serif;
+    font-size: 120px;
+    margin-top: 100px;
+}
+.hero-text {
+    color: white;
+    font-family: 'SFRegular', sans-serif;
+    font-size: 48px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    border: solid 1px white;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;/* Centrer le texte */
+    margin-top: 30px;
+    font-family: 'SFRegular', sans-serif;
+    font-size: 32px;
+}
+
+.title {
+    color: white;
+    font-family: 'SFBold', sans-serif;
+    font-size: 62px;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+text-align: center;
+max-width: 90rem;
+margin: 0 auto;
+max-height: 60rem;
+margin-bottom: 100px;
+}
+@keyframes slideInLeft {
+  from { transform: translateX(-100vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInUp {
+  from { transform: translateY(100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideInDown {
+  from { transform: translateY(-100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.div1 { 
+    grid-area: 1 / 1 / 2 / 7; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+
+    /* Fond translucide */
+    background: rgba(0, 0, 0, 0.027);
+
+    /* Bordure lumineuse */
+
+
+    /* Flou et saturation derrière */
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+    /* Reflet interne pour “liquid” */
+    box-shadow:
+      0 4px 30px rgba(0, 0, 0, 0.2),
+      inset 0 0 25px rgba(245, 245, 245, 0.188);
+
+    /* Bonne découpe du blur */
+    overflow: hidden;
+    background-clip: padding-box;
+    animation: slideInLeft 2s cubic-bezier(.77,0,.18,1) both; 
+    animation-delay: 1s;
+}
+span {
+    color: white;
+    font-family: 'SFBold', sans-serif;
+    font-size: 30px;
+
+}
+
+.div2 { 
+    grid-area: 2 / 1 / 4 / 3; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:40px;
+     background: rgba(84, 84, 84, 0.027);
+
+    /* Bordure lumineuse */
+
+
+    /* Flou et saturation derrière */
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+    /* Reflet interne pour “liquid” */
+    box-shadow:
+      0 4px 30px rgba(0, 0, 0, 0.2),
+      inset 0 0 25px rgba(245, 245, 245, 0.188);
+
+    /* Bonne découpe du blur */
+    overflow: hidden;
+    background-clip: padding-box;
+    animation: slideInLeft 2s cubic-bezier(.77,0,.18,1) both; 
+    animation-delay: 1.30s;
+}
+.div3 { 
+    grid-area: 2 / 3 / 4 / 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:40px;
+     background: rgba(84, 84, 84, 0.027);
+
+    /* Bordure lumineuse */
+  
+
+    /* Flou et saturation derrière */
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+    /* Reflet interne pour “liquid” */
+    box-shadow:
+      0 4px 30px rgba(0, 0, 0, 0.2),
+      inset 0 0 25px rgba(245, 245, 245, 0.188);
+
+    /* Bonne découpe du blur */
+    overflow: hidden;
+    background-clip: padding-box;
+    animation: slideInRight 2s cubic-bezier(.77,0,.18,1) both; 
+    animation-delay: 1.45s;
+}
+
+.div4 { 
+    grid-area: 2 / 5 / 6 / 7; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:40px;
+     background: rgba(84, 84, 84, 0.027);
+
+    /* Bordure lumineuse */
+
+
+    /* Flou et saturation derrière */
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+    /* Reflet interne pour “liquid” */
+    box-shadow:
+      0 4px 30px rgba(0, 0, 0, 0.2),
+      inset 0 0 25px rgba(245, 245, 245, 0.188);
+
+    /* Bonne découpe du blur */
+    overflow: hidden;
+    background-clip: padding-box;
+    animation: slideInRight 2s cubic-bezier(.77,0,.18,1) both; 
+    animation-delay: 2s;
+}
+.div5 { 
+    grid-area: 4 / 1 / 6 / 5; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:40px;
+     background: rgba(84, 84, 84, 0.027);
+
+    /* Bordure lumineuse */
+   
+
+    /* Flou et saturation derrière */
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+    /* Reflet interne pour “liquid” */
+    box-shadow:
+      0 4px 30px rgba(0, 0, 0, 0.2),
+      inset 0 0 25px rgba(245, 245, 245, 0.188);
+
+    /* Bonne découpe du blur */
+    overflow: hidden;
+    background-clip: padding-box;
+    animation: slideInLeft 2s cubic-bezier(.77,0,.18,1) both; 
+    animation-delay: 2.30s;
+}
+
+/* Make images in the grid fill their cell and show the top */
+.div5 {
+  display: block; /* ensure block-level for sizing */
+  position: relative;
+  overflow: hidden; /* crop the image to the container */
+}
+.div5 .image-grid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill the box */
+  object-position: top center; /* show the top of the image */
+  display: block;
+}
+
+.title-grid {
+    color: white;
+    font-family: 'SFBold', sans-serif;
+    font-size: 36px;
+    margin-top: 20px;
+}
+.text-grid {
+
+    color: white;
+    font-family: 'SFRegular', sans-serif;
+    font-size: 32px;
+    margin: 20px;
+}
+.text-grid-main {
+
+    color: white;
+    font-family: 'SFRegular', sans-serif;
+    font-size: 48px;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.text-gradient {
+    background: linear-gradient(to left, rgb(129, 49, 134) 0%, rgb(240, 124, 255) 30%, rgb(255, 205, 255) 65%, rgb(187, 0, 255) 100%);
+     -webkit-background-clip: text; /* pour Chrome/Safari */
+      -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
+      background-clip: text; /* standard */
+      color: transparent; /* sécurité */
+    font-family: 'SFBold', sans-serif;
+    font-size: 64px;   
+}
+.devis-section {
+    background-color: black;
+    text-align: center;
+    padding-block: 50px;   
+}
+
+.title-devis {
+    color: white;
+    font-family: 'SFBold', sans-serif;  
+    font-size: 64px;
+    background: linear-gradient(to left, rgb(42, 42, 42) 0%, rgb(190, 190, 190) 50%,  rgb(255, 255, 255) 100%);
+     -webkit-background-clip: text; /* pour Chrome/Safari */
+     -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
+      background-clip: text; /* standard */
+      color: transparent; /* sécurité */
+ 
+      animation: fadeIn 2s ease-in;
+}
+
+
+.text-devis {
+      background: linear-gradient(to left, rgb(129, 49, 134) 0%, rgb(240, 124, 255) 30%, rgb(255, 205, 255) 65%, rgb(187, 0, 255) 100%);
+     -webkit-background-clip: text; /* pour Chrome/Safari */
+      -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
+      background-clip: text; /* standard */
+      color: transparent; /* sécurité */
+    font-family: 'SFBold', sans-serif;
+    font-size: 48px;
+    animation: fadeIn 2s ease-in;
+    
+}
+
+ .faq {
+        margin-top: 100px;
+        padding-bottom: 30px;
+        text-align: center;
+        max-width: 90rem;
+        margin: auto;
+      
+    }
+
+.services-title {
+        color: white;
+        font-family: 'SFBold', sans-serif;
+        font-size: 64px;
+        margin-bottom: 100px;
+    }    
+    .faq-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 100px;
+        border-radius: 40px;
+        padding: 50px;
+
+
+    /* Fond translucide */
+        background: rgba(84, 84, 84, 0.027);
+
+    /* Bordure lumineuse */
+
+
+    /* Flou et saturation derrière */
+        backdrop-filter: blur(25px) saturate(150%);
+        -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+    /* Reflet interne pour “liquid” */
+        box-shadow:
+         0 4px 30px rgba(0, 0, 0, 0.2),
+         inset 0 0 25px rgba(245, 245, 245, 0.188);
+    }
+    .faq-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 10px;
+        max-width: 50rem;
+        border-bottom: solid 1px white;
+        
+
+    /* Bordure lumineuse */
+
+
+ 
+    }
+
+
+    .faq-question {
+        font-family: 'SFBold', sans-serif;
+        font-size: 24px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        color: #ffffff;
+        padding: 10px;
+        padding-inline: 20px;
+        border-radius: 40px;
+        background: transparent;
+
+
+    }
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        font-family: 'SFRegular', sans-serif;
+        font-size: 24px;
+        color: #ffffff;
+        text-align: center;
+        max-width: 50rem;
+    }
+    .faq-item.active .faq-answer {
+        max-height: 300px;/* Ajuste selon la taille estimée de ta réponse */
+    }
+    .profil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        max-width: 42rem;
+        margin: auto;   
+        padding-bottom: 1rem;
+    }
+
+      .slider {
+      overflow: hidden;
+      padding-top: 42px;
+    }
+    .slide-track {
+      display: flex;
+      width: calc(200px * 10); /* largeur totale */
+      animation: scroll 20s linear infinite;
+    }
+    .slide {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slide img {
+      max-width: 150px;
+      height: auto;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    footer {
+  background-color: #131313;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-line {
+  width: 60px;
+  height: 1px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Texte du footer */
+.footer-text {
+    font-family: 'SFRegular', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Liens du footer */
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: color 0.3s, transform 0.3s;
+    font-family: 'SFRegular', sans-serif;
+}
+
+.footer-links a:hover {
+  color: #630045;
+  transform: translateY(-2px);
+}
+
+/* Icônes sociales */
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    
+    body {
+        overflow-x: hidden; 
+    }
+    .hero {
+        margin-inline: 20px;
+    }
+  .burger {
+    display: flex;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(30,30,30,0.98);
+    flex-direction: column;
+    gap: 24px;
+    width: 80vw;
+    max-width: 320px;
+    padding: 32px 0 32px 24px;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    z-index: 99;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hero-title {
+    font-size: 64px;
+  }
+    .hero-text {
+        font-size: 32px;
+    }
+    .title {
+        font-size: 42px;
+    }
+    .parent {
+        display: none;
+    }
+
+    .services {
+        margin-inline: 20px;
+    }
+ .parent-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espace entre les divs */
+    max-width: 100%;
+    max-height: none;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .div1 {
+    padding-bottom: 20px;
+  }
+
+  .div1, .div4, .div5 {
+    width: 100%;
+  }
+
+  /* Wrapper pour div2 et div3 côte à côte */
+  .div2-div3-wrapper {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .div2, .div3 {
+    flex: 1; /* chacune prend 50% */
+    padding-bottom: 20px;
+    
+  }
+
+  .div4{
+    padding-bottom: 20px;
+  }
+    .div5 {
+        height: 250px;
+        margin-top: 20px;
+    }
+
+  .slider {
+      padding: 0px;
+    }
+  .slide img {
+        width: 60px;
+    }
+    
+    .title-grid {
+        font-size: 28px;
+    }       
+    .text-grid {
+        font-size: 20px;
+    }
+    .text-grid-main {
+        font-size: 20px;
+    }
+    .text-gradient {
+        font-size: 42px;
+    }
+    .cta-button {
+        font-size: 24px;
+        padding: 12px 24px;
+    }
+
+    .title-devis {
+        font-size: 42px;
+        margin-inline: 20px;
+    }
+    .text-devis {
+        font-size: 32px;
+        margin-inline: 20px;
+    }
+    .faq-container {
+        flex-direction: column;
+        margin-inline: 20px;
+        gap: 0px;
+    }
+
+}
