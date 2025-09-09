@@ -1,3 +1,26 @@
+// Scroll smooth sur la navbar
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = link.getAttribute('href');
+      if (href === '#Services') {
+        e.preventDefault();
+        const target = document.querySelector('.devis-section');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+      if (href === '#Realisation') {
+        e.preventDefault();
+        const target = document.querySelector('.services');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+       if (href === '.nav-center') {
+        e.preventDefault();
+        const target = document.querySelector('.services');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
 // Burger menu JS
 document.addEventListener('DOMContentLoaded', function() {
   const burger = document.querySelector('.burger');

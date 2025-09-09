@@ -1,4 +1,16 @@
 /* Burger menu styles */
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+a:hover {
+    color: #9000ff;
+}
+button:hover {
+    background-color: #9000ff;
+    border-color:#9000ff;
+}
 .parent-mobile {
     display: none;
 }
@@ -40,7 +52,7 @@
   gap: 32px;
   background: rgba(84,84,84,0.04);
   border-radius: 40px;
-  padding: 80px 64px;
+  padding: 40px;
   box-shadow: 0 4px 30px rgba(0,0,0,0.12), inset 0 0 25px rgba(245,245,245,0.08);
 }
 .contact-form label {
@@ -547,7 +559,7 @@ span {
         margin-bottom: 20px;
         gap: 10px;
         max-width: 50rem;
-        border-bottom: solid 1px white;
+        border-bottom: solid 1px rgb(75, 33, 78);
         
 
     /* Bordure lumineuse */
@@ -648,40 +660,20 @@ span {
 }
 
 /* Liens du footer */
-.footer-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
 
-.footer-links a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 0.95rem;
-  transition: color 0.3s, transform 0.3s;
-    font-family: 'SFRegular', sans-serif;
-}
-
-.footer-links a:hover {
-  color: #630045;
-  transform: translateY(-2px);
-}
 
 /* Icônes sociales */
 .footer-social {
   display: flex;
   gap: 15px;
-  margin-top: 5px;
 }
 
 .footer-social a {
-  color: #ffffff;
   font-size: 1.1rem;
   transition: color 0.3s, transform 0.3s;
 }
 
 .footer-social a:hover {
-  color: #ffffff;
   transform: translateY(-3px);
 }
 
@@ -828,6 +820,17 @@ span {
         height:100px;
     }
 
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+    .text-grid-main {
+        text-align: center;
+    }
 
+
+     .contact-form {
+    margin-inline: 20px;
+  }
 
 }
