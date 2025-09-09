@@ -21,10 +21,10 @@ export default async function handler(req, res) {
       },
     };
 
-    // If a private key (server key) is provided in env, include it for strict mode
+    // If a private key (server key) is provided in env, include it for strict mode.
+    // EmailJS REST expects 'accessToken' for strict/server mode.
     if (process.env.EMAILJS_PRIVATE_KEY) {
-      // EmailJS expects 'private_key' (or 'accessToken' depending on setup). Use private_key first.
-      payload.private_key = process.env.EMAILJS_PRIVATE_KEY;
+      payload.accessToken = process.env.EMAILJS_PRIVATE_KEY;
     }
 
     const r = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
@@ -36,7 +36,10 @@ export default async function handler(req, res) {
     if (!r.ok) {
       const text = await r.text();
       console.error('EmailJS API error', r.status, text);
-      return res.status(r.status).json({ error: text });
+      // try to parse JSON body for better error info
+      let parsed = text;
+      try { parsed = JSON.parse(text); } catch(e) { /* keep raw text */ }
+      return res.status(r.status).json({ error: parsed });
     }
 
     return res.status(200).json({ ok: true });
