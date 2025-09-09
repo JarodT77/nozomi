@@ -201,7 +201,7 @@ function autoClearMessage(timeout = 5000) {
 }
 
 if (form && formMessage) {
-  form.addEventListener('submit', function(event) {
+  form.addEventListener('submit', async function(event) {
     event.preventDefault(); // Empêche le rechargement de la page
 
     const name = document.getElementById('name').value.trim();
@@ -221,33 +221,34 @@ if (form && formMessage) {
       message: message
     };
 
-    if (typeof emailjs === 'undefined') {
-      formMessage.style.color = 'red';
-      formMessage.textContent = 'Service de messagerie indisponible.';
-      console.error('EmailJS is not loaded');
-      autoClearMessage();
-      return;
-    }
-
+    // Send to serverless endpoint (Vercel) which forwards to EmailJS using env vars
     try {
-      emailjs.init(EMAILJS_PUBLIC_KEY);
-      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-        .then(() => {
-          formMessage.style.color = 'green';
-          formMessage.textContent = 'Message envoyé avec succès !';
-          form.reset();
-          autoClearMessage();
-        })
-        .catch((error) => {
-          formMessage.style.color = 'red';
-          formMessage.textContent = 'Erreur lors de l\'envoi du message.';
-          console.error('EmailJS Error:', error);
-          autoClearMessage();
-        });
+      formMessage.style.color = 'black';
+      formMessage.textContent = 'Envoi en cours...';
+
+      const resp = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (!resp.ok) {
+        const text = await resp.text();
+        console.error('Server send error', resp.status, text);
+        formMessage.style.color = 'red';
+        formMessage.textContent = 'Erreur lors de l\'envoi du message.';
+        autoClearMessage();
+        return;
+      }
+
+      formMessage.style.color = 'green';
+      formMessage.textContent = 'Message envoyé avec succès !';
+      form.reset();
+      autoClearMessage();
     } catch (err) {
+      console.error('Fetch send error', err);
       formMessage.style.color = 'red';
-      formMessage.textContent = 'Erreur interne lors de l\'envoi.';
-      console.error('Send error:', err);
+      formMessage.textContent = 'Erreur réseau lors de l\'envoi.';
       autoClearMessage();
     }
   });
