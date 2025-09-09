@@ -231,7 +231,8 @@ a {
 }
 .cta-button {
     display: inline-block;
-    padding: 20px;
+    padding-inline: 20px;
+    padding-block: 10px;
     background-color: transparent;
     color: white;
     border: solid 1px white;
@@ -460,6 +461,7 @@ span {
     font-size: 32px;
     margin: 20px;
 }
+
 .text-grid-main {
 
     color: white;
@@ -681,6 +683,14 @@ span {
         width:300px;
         height:200px;
     }
+
+#formMessage {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
     
     body {
@@ -787,6 +797,7 @@ span {
     }       
     .text-grid {
         font-size: 20px;
+        text-align: center;
     }
     .text-grid-main {
         font-size: 28px;
@@ -831,6 +842,7 @@ span {
 
      .contact-form {
     margin-inline: 20px;
+    padding-top: 0px;
   }
 
 }

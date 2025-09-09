@@ -160,7 +160,8 @@ const logos = [
 ]
 
 const carousel = document.getElementById('carousel');
-carousel.innerHTML = `
+if (carousel) {
+  carousel.innerHTML = `
   <div class="slider">
     <div class="slide-track">
       ${[...logos, ...logos].map(logo => `
@@ -169,10 +170,13 @@ carousel.innerHTML = `
     </div>
   </div>
 `;
-
+} else {
+  console.warn('No #carousel element found on this page. Skipping desktop carousel init.');
+}
 
 const carouselMobile = document.getElementById('carousel-mobile');
-carouselMobile.innerHTML = `
+if (carouselMobile) {
+  carouselMobile.innerHTML = `
   <div class="slider">
     <div class="slide-track">
       ${[...logos, ...logos].map(logo => `
@@ -181,3 +185,75 @@ carouselMobile.innerHTML = `
     </div>
   </div>
 `;
+} else {
+  console.warn('No #carousel-mobile element found on this page. Skipping mobile carousel init.');
+}
+
+const form = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+
+// Utility to auto-clear the message after a delay
+function autoClearMessage(timeout = 5000) {
+  if (!formMessage) return;
+  setTimeout(() => {
+    formMessage.textContent = '';
+  }, timeout);
+}
+
+if (form && formMessage) {
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name === '' || email === '' || message === '') {
+      formMessage.textContent = 'Veuillez remplir tous les champs.';
+      formMessage.style.color = 'red';
+      autoClearMessage();
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message
+    };
+
+    if (typeof emailjs === 'undefined') {
+      formMessage.style.color = 'red';
+      formMessage.textContent = 'Service de messagerie indisponible.';
+      console.error('EmailJS is not loaded');
+      autoClearMessage();
+      return;
+    }
+
+    try {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(() => {
+          formMessage.style.color = 'green';
+          formMessage.textContent = 'Message envoyé avec succès !';
+          form.reset();
+          autoClearMessage();
+        })
+        .catch((error) => {
+          formMessage.style.color = 'red';
+          formMessage.textContent = 'Erreur lors de l\'envoi du message.';
+          console.error('EmailJS Error:', error);
+          autoClearMessage();
+        });
+    } catch (err) {
+      formMessage.style.color = 'red';
+      formMessage.textContent = 'Erreur interne lors de l\'envoi.';
+      console.error('Send error:', err);
+      autoClearMessage();
+    }
+  });
+} else {
+  // Page without contact form - avoid runtime errors
+  if (!form) console.warn('No contact form (#contactForm) found on this page.');
+  if (!formMessage) console.warn('No formMessage (#formMessage) element found on this page.');
+}
+
