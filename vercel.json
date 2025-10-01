@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "https://www.nozomiweb.com/(.*)",
+      "destination": "https://nozomiweb.com/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
