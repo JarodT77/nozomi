@@ -1,0 +1,14 @@
+{
+  "name": "nozomi-website",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Site vitrine Nozomi - Création de sites web",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["website", "static", "html", "css", "javascript"],
+  "author": "Nozomi",
+  "license": "MIT"
+}
