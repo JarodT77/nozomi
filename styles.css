@@ -4,9 +4,10 @@ html, body {
 }
 
 .container-hero {
-  border-radius: 30px;
+  border-radius: 40px;
   border: solid 3px #cccccc;
   margin: 20px;
+  background-color: rgb(235, 235, 235);
 }
 
 .social-icon {
@@ -54,20 +55,29 @@ button:hover {
   justify-content: center;
   margin-bottom: 100px;
 }
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.12), inset 0 0 25px rgba(245,245,245,0.08);
+  gap: 80px;
+  max-width: 1300px;
+  width: 100%;
+}
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  background: rgba(84,84,84,0.04);
-  border-radius: 40px;
-  padding: 40px;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.12), inset 0 0 25px rgba(245,245,245,0.08);
+  
 }
 .contact-form label {
   font-family: 'SFBold', sans-serif;
   font-size: 1.3rem;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-bottom: 8px;
   display: block;
 }
@@ -75,7 +85,7 @@ button:hover {
 .contact-form textarea {
   padding: 18px 24px;
   border-radius: 20px;
-  border: 1.5px solid #63008e;
+  border: 1.5px solid #ffffff;
   background: transparent;
   color: white;
   font-size: 1.35rem;
@@ -83,7 +93,7 @@ button:hover {
   margin-bottom: 12px;
   outline: none;
   transition: border-color 0.2s;
-width: 600px;
+  width: 600px;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -541,6 +551,12 @@ span {
     font-family: 'SFRegular', sans-serif;
     font-size: 36px;
 }
+
+.text-contact{
+    color: rgb(255, 255, 255);
+    font-family: 'SFRegular', sans-serif;
+    font-size: 36px;
+}
 .p-grid-main {
     color: white;
     font-family: 'SFRegular', sans-serif;
@@ -811,8 +827,7 @@ span {
         overflow-x: hidden; 
     }
     .container-hero {
-        border: none;
-        margin: none;
+     margin: 10px;
     }
     .hero {
         margin-inline: 20px;
@@ -981,7 +996,7 @@ span {
     }
 
   .contact-form input, .contact-form textarea {
-    width: 100%;
+    width: 320px;
     box-sizing: border-box;
   }
     .text-grid-main {
@@ -992,6 +1007,15 @@ span {
      .contact-form {
     margin-inline: 20px;
     padding-top: 0px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-contact {
+    text-align: center;
   }
 
   .name-site {

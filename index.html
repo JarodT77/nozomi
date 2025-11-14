@@ -402,10 +402,44 @@
             <p class="text-devis">Un simple clic pour lancer votre projet et gagner en visibilité dès aujourd’hui !</p>
             <button class="cta-button" onclick="window.location.href='contact.html'">Demander un devis</button>
         </section>
-        <!-- Début de widget en ligne Calendly -->
-         <!-- Début de widget en ligne Calendly -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/thongkhamdyjarod/30min" style="min-width:320px;height:700px;"></div>
+        <section class="contact-section">
+      <h1 class="title">Contactez-nous</h1>
+      <div class= "contact-container">
+        <div>
+             <form class="contact-form" id="contactForm">
+            <h1 class="text-contact">Faites nous part de votre projet</h1>
+            <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="cta-button">Envoyer</button>
+        <p id="formMessage"></p>
+        <p class="text-grid">Ou nous joindre par Whats'app ou par Email :</p>
+         <div class="footer-social">
+        <a href="mailto:thongkhamdyjarod@gmail.com?subject=Demande%20de%20devis&"><img src ="images/gmail.png" class="social-icon"></a>
+         <a href="https://wa.me/0781716105"><img src ="images/whatsapp.png" class="social-icon"></a>
+      </div> 
+      </form>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/thongkhamdyjarod/30min" style="width:500px;height:700px"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+        </div>
+
+      </div>
+      
+    </section>
+        
+        
 <!-- Fin de widget en ligne Calendly -->
         
 <footer>
