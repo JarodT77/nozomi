@@ -72,16 +72,13 @@ const devisTextsChange = [
   'Modernisez votre présence digitale avec un design actuel et performant.'
 ];
 
-const imageElement = document.querySelector('.parent .div5');
- const images = [
-    "./images/nutrition-antifragile.png",
-    "./images/portefolio.png",
-    "./images/saveurdumonde.png"
-  ];
+
+
 
 // Lance l'animation
 startTextRotation(devisTitle, devisTexts);
 startTextRotation(textService, devisTextsChange);
+
 // Rotate images: change the <img> src inside the container and replay fadeIn
 function startImageRotation(container, imgs, delay = 5000) {
   if (!container || !imgs || imgs.length === 0) return;
@@ -108,8 +105,6 @@ function startImageRotation(container, imgs, delay = 5000) {
   }, delay);
 }
 
-startImageRotation(imageElement, images, 5000);
-
 const imageElementMobile = document.querySelector('.parent-mobile .div5');
 const imagesMobile = [
   "./images/nutrition-antifragile.png",
@@ -117,8 +112,8 @@ const imagesMobile = [
   "./images/saveurdumonde.png"
 ];
 
-// Fonction pour faire tourner les images avec fadeIn
-function startImageRotation(container, imgs, delay = 5000) {
+// Fonction pour faire tourner les images avec fadeIn (mobile)
+function startImageRotationMobile(container, imgs, delay = 5000) {
   if (!container || !imgs || imgs.length === 0) return;
 
   // Récupérer ou créer un <img> dans le container
@@ -146,7 +141,7 @@ function startImageRotation(container, imgs, delay = 5000) {
 }
 
 // Lancer la rotation pour mobile
-startImageRotation(imageElementMobile, imagesMobile, 5000);
+startImageRotationMobile(imageElementMobile, imagesMobile, 5000);
 
 
 const logos = [
@@ -257,4 +252,72 @@ if (form && formMessage) {
   if (!form) console.warn('No contact form (#contactForm) found on this page.');
   if (!formMessage) console.warn('No formMessage (#formMessage) element found on this page.');
 }
+
+// Testimonial Slider - Version robuste
+function initTestimonialSlider() {
+  const track = document.querySelector('.testimonial-track');
+  const items = document.querySelectorAll('.testimonial-item');
+  const dots = document.querySelectorAll('.testimonial-dots .dot');
+  
+  console.log('Trying to initialize testimonial slider...');
+  console.log('Track found:', !!track);
+  console.log('Items found:', items.length);
+  console.log('Dots found:', dots.length);
+  
+  if (!track || items.length === 0 || dots.length === 0) {
+    console.log('Testimonial slider elements not found, retrying in 100ms...');
+    setTimeout(initTestimonialSlider, 100);
+    return;
+  }
+  
+  let currentSlide = 0;
+  const totalSlides = items.length;
+  
+  console.log(`✅ Testimonial slider initialized with ${totalSlides} slides`);
+  
+  function updateSlider() {
+    const translateX = -(currentSlide * 100);
+    track.style.transform = `translateX(${translateX}%)`;
+    
+    console.log(`📍 Moving to slide ${currentSlide}, translateX: ${translateX}%`);
+    
+    dots.forEach((dot, index) => {
+      dot.classList.remove('active');
+      if (index === currentSlide) {
+        dot.classList.add('active');
+      }
+    });
+  }
+  
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    console.log(`➡️ Auto-advancing to slide ${currentSlide}`);
+    updateSlider();
+  }
+  
+  // Auto-slide toutes les 4 secondes
+  let autoSlideInterval = setInterval(nextSlide, 4000);
+  console.log('🔄 Auto-slide started (4s interval)');
+  
+  // Navigation par dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      console.log(`🔘 Dot clicked: moving to slide ${index}`);
+      currentSlide = index;
+      updateSlider();
+      
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(nextSlide, 4000);
+    });
+  });
+  
+  // Initialiser
+  updateSlider();
+}
+
+// Démarrer dès que le DOM est prêt
+document.addEventListener('DOMContentLoaded', initTestimonialSlider);
+
+// Backup: démarrer après un délai si DOMContentLoaded a déjà été déclenché
+setTimeout(initTestimonialSlider, 500);
 

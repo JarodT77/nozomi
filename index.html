@@ -7,15 +7,19 @@
     <title>NOZOMI | création de sites web modernes et performants</title>
     <meta name="description" content="NOZOMI est une agence de création de sites web modernes et performants, dédiée à aider les entrepreneurs et les marques à se démarquer en ligne. Nous offrons des solutions sur mesure pour transformer vos idées en expériences digitales uniques.">
     <link rel="icon" type="image/png" href="./images/nozomi-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <div class="container-hero">
+         <header>
         <nav>
             <div>
-                <h1 class="logo">NOZOMI</h1>
+                <p class="logo">NOZOMI</p>
             </div>
             <div class="nav-center">
-                <svg version="1.1" viewBox="0 0 1024 1024" width="80" height="80" xmlns="http://www.w3.org/2000/svg"><path transform="translate(656,296)" d="m0 0h74v290l-3 21-5 18-8 18-8 14-8 11-12 14-13 12-18 13-15 8-7 1-162-162v-99l7 6 105 105 2 1v2l4 2 12 12v2l4 2 40 40 7 8 3 3z" fill="white"/><path transform="translate(459,296)" d="m0 0h94v155l-3-1v-2l-4-2-75-75h-18l-15 3-15 6-15 10-10 9-13 17-8 16-6 18-3 17-1 11-1 246h-72v-260l3-25 5-20 7-19 11-21 12-17 12-13 9-9 17-13 13-8 16-8 18-7 25-6z" fill="white"/>
+                <svg version="1.1" viewBox="0 0 1024 1024" width="80" height="80" xmlns="http://www.w3.org/2000/svg"><path transform="translate(656,296)" d="m0 0h74v290l-3 21-5 18-8 18-8 14-8 11-12 14-13 12-18 13-15 8-7 1-162-162v-99l7 6 105 105 2 1v2l4 2 12 12v2l4 2 40 40 7 8 3 3z" fill="black"/><path transform="translate(459,296)" d="m0 0h94v155l-3-1v-2l-4-2-75-75h-18l-15 3-15 6-15 10-10 9-13 17-8 16-6 18-3 17-1 11-1 246h-72v-260l3-25 5-20 7-19 11-21 12-17 12-13 9-9 17-13 13-8 16-8 18-7 25-6z" fill="black"/>
                 </svg>
             </div>
             <button class="burger" aria-label="Menu" aria-expanded="false">
@@ -35,66 +39,251 @@
     </header>
     <main>
          <section class="hero">
-            <h1 class="hero-title">Creer une expérience<br> digitale unique</h1>
-            <p class="hero-text">Chaque clic devient une aventure pour vos utilisateurs.</p>
+            <h1 class="hero-title">Des <span class="text-italic">Sites </span>et des <span class="text-italic">Landing Pages</span> faits pour convertir</h1>
+            <p class="hero-text">On ne crée pas juste des sites. On construit des expériences digitales qui transforment vos visiteurs en clients.</p>
             <button class="cta-button" onclick="window.location.href='contact.html'">Demander un devis</button>
+            <div class="benefice-text">
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <span>Sites sur-mesure</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <span>Conçue pour convertir</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <span>Livraison rapide</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                        <span>Performance optimisée</span>
+                    </li>
+                </ul>
+            </div>
         </section>
+    </div>
+   
         <section class="services">
-            <h1 class="title">Créez une identité digitale qui inspire confiance.</h1>
+            <h2 class="title">Créez une identité digitale qui inspire <span class="text-italic-48">confiance.</span></h2>
             <div class="parent">
                 <div class="div1">
-                    <p class="text-grid-main">Nous de faisons pas que créer des sites:<br> nous créons des <strong>expériences.</strong></p>
-                    </p>
+                    <h3 class="text-grid-main">Transformons vos idées en <span class="text-italic-36"> experiences.</span></h3>
+                    <p class="p-grid-main no-spacing">Je conçois des sites web sur mesure qui reflètent votre vision, captivent vos visiteurs et génèrent des résultats concrets. Un design soigné, une navigation fluide, une identité forte — votre projet prend vie en ligne.</p>
                 </div>
                 <div class="div2">
-                    <p class="text-grid">L’art de convertir simplement.</p>
-                    <img src="./images/chart.gif" alt="chart" width="150px" height="150px">
+                    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_1_2)">
+                    <rect x="4" width="80" height="80" rx="20" fill="url(#paint0_radial_1_2)"/>
+                    <path d="M61.5 60C57.2037 60 52.8241 58.963 48.3611 56.8889C43.8981 54.8148 39.7593 51.8704 35.9444 48.0556C32.1296 44.2407 29.1852 40.1019 27.1111 35.6389C25.037 31.1759 24 26.7963 24 22.5C24 21.7856 24.2381 21.1904 24.7144 20.7144C25.1904 20.2381 25.7856 20 26.5 20H34.2778C34.7963 20 35.2407 20.1852 35.6111 20.5556C35.9815 20.9259 36.2407 21.3889 36.3889 21.9444L37.885 28.9244C37.9617 29.4563 37.9537 29.9352 37.8611 30.3611C37.7685 30.787 37.5698 31.1524 37.265 31.4572L31.7222 37.0556C32.6852 38.6852 33.7037 40.2037 34.7778 41.6111C35.8519 43.0185 37.037 44.3519 38.3333 45.6111C39.7037 47.0185 41.1481 48.3056 42.6667 49.4722C44.1852 50.6389 45.7778 51.6667 47.4444 52.5556L52.7222 47.1111C53.0926 46.7037 53.5213 46.4259 54.0083 46.2778C54.4954 46.1296 54.9741 46.0926 55.4444 46.1667L62.0556 47.6111C62.6111 47.7593 63.0741 48.0563 63.4444 48.5022C63.8148 48.9485 64 49.4478 64 50V57.5C64 58.2144 63.7619 58.8096 63.2856 59.2856C62.8096 59.7619 62.2144 60 61.5 60ZM30.0556 34L34.5556 29.4444L33.2778 23.3333H27.3333C27.4074 24.8889 27.6574 26.5278 28.0833 28.25C28.5093 29.9722 29.1667 31.8889 30.0556 34ZM50.5556 54.1667C52.0741 54.8704 53.7222 55.4444 55.5 55.8889C57.2778 56.3333 59 56.5926 60.6667 56.6667V50.7222L54.9444 49.5556L50.5556 54.1667Z" fill="#565656"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_1_2" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+                    </filter>
+                    <radialGradient id="paint0_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(44 40) rotate(90) scale(40)">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="#999999"/>
+                    </radialGradient>
+                    </defs>
+                    </svg>
+                    <h3 class="title-grid">Appel de Découverte</h3>
+                    <p class="text-grid">30 minutes pour comprendre votre vision, répondre à vos questions, et définir les bases d’un site qui convertit.</p>
                 </div>
                 <div class="div3">
-                    <p class="text-grid">Donner vie à vos idées.</p>
-                    <div id="carousel"></div>
+                    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_1_2)">
+                    <rect x="4" width="80" height="80" rx="20" fill="url(#paint0_radial_1_2)"/>
+                    <path d="M27.85 25.8889H56.1L54.2795 23.3333H29.65L27.85 25.8889ZM37 42.8333L42 40.0556L47 42.8333V29.2222H37V42.8333ZM27 60C26.175 60 25.4688 59.6735 24.8815 59.0206C24.2938 58.368 24 57.5833 24 56.6667V27.2778C24 26.9119 24.05 26.5589 24.15 26.2189C24.25 25.8789 24.4 25.5652 24.6 25.2778L27.2 21.3333C27.4667 20.9259 27.8157 20.6019 28.247 20.3611C28.6783 20.1204 29.1293 20 29.6 20H54.35C54.8207 20 55.2717 20.1204 55.703 20.3611C56.1343 20.6019 56.4833 20.9259 56.75 21.3333L59.4 25.2778C59.6 25.5652 59.75 25.8789 59.85 26.2189C59.95 26.5589 60 26.9119 60 27.2778V36.6111C59.3667 36.6111 58.825 36.6481 58.375 36.7222C57.925 36.7963 57.4667 36.9259 57 37.1111V29.2222H50V44.0556L47.45 46.8333L42 43.7778L34 48.2222V29.2222H27V56.6667H43V60H27ZM46 60V53.1667L57.05 40.9444C57.35 40.6111 57.6833 40.3704 58.05 40.2222C58.4167 40.0741 58.7833 40 59.15 40C59.55 40 59.9333 40.0833 60.3 40.25C60.6667 40.4167 61 40.6667 61.3 41L63.15 43.0556C63.45 43.3889 63.6667 43.7593 63.8 44.1667C63.9333 44.5741 64 44.9815 64 45.3889C64 45.7963 63.925 46.213 63.775 46.6389C63.625 47.0648 63.4015 47.4444 63.1045 47.7778L52.15 60H46ZM49 56.6667H50.9L56.95 49.8889L56.05 48.8333L55.1 47.8333L49 54.5556V56.6667ZM56.05 48.8333L55.1 47.8333L56.95 49.8889L56.05 48.8333Z" fill="#565656"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_1_2" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+                    </filter>
+                    <radialGradient id="paint0_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(44 40) rotate(90) scale(40)">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="#999999"/>
+                    </radialGradient>
+                    </defs>
+                    </svg>
+                    <h3 class="title-grid">Création du Projet</h3>
+                    <p class="text-grid">De l’architecture de votre site à chaque ligne de texte, jusqu’à la dernière touche graphique : tout est conçu avec une précision millimétrée.</p>
                 </div>
                 <div class="div4">
-                    <h1 class="text-gradient">Transformez<br> vos idées <br>en réalité</h1>
+                    <h3 class="text-gradient">Transformez<br> vos idées <br>en réalité</h3>
                     <button class="cta-button" onclick="window.location.href='contact.html'">Demander un devis</button>
                 </div>
                 <div class="div5">
-                    
+                    <div class="div5-left">
+                        <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_1_2)">
+                    <rect x="4" width="80" height="80" rx="20" fill="url(#paint0_radial_1_2)"/>
+                    <path d="M29.5476 36.366L34.798 38.6145C35.3924 37.4153 36.028 36.2328 36.705 35.0669C37.3819 33.901 38.1001 32.7851 38.8596 31.7192L34.9466 30.9197L29.5476 36.366ZM37.1755 40.4133L43.7633 47.0588C45.6455 46.1927 47.4122 45.21 49.0632 44.1108C50.7143 43.0115 52.0517 41.9456 53.0753 40.913C55.7501 38.2148 57.7148 35.45 58.9696 32.6186C60.2245 29.7872 60.9014 26.5893 61.0005 23.0251C57.4672 23.125 54.2971 23.8079 51.4903 25.0737C48.6835 26.3395 45.9427 28.3215 43.268 31.0197C42.2443 32.0523 41.1876 33.4014 40.0979 35.0669C39.0082 36.7325 38.0341 38.5146 37.1755 40.4133ZM48.5184 35.6165C47.8579 34.9503 47.5277 34.1259 47.5277 33.1432C47.5277 32.1606 47.8579 31.3361 48.5184 30.6699C49.1788 30.0037 49.9961 29.6706 50.9702 29.6706C51.9443 29.6706 52.7616 30.0037 53.422 30.6699C54.0825 31.3361 54.4127 32.1606 54.4127 33.1432C54.4127 34.1259 54.0825 34.9503 53.422 35.6165C52.7616 36.2828 51.9443 36.6159 50.9702 36.6159C49.9961 36.6159 49.1788 36.2828 48.5184 35.6165ZM47.7754 54.7536L53.1744 49.3073L52.3819 45.3599C51.3252 46.1261 50.219 46.8506 49.0632 47.5335C47.9075 48.2163 46.7352 48.8576 45.5464 49.4572L47.7754 54.7536ZM63.9228 20.0771C64.22 24.6073 63.6587 28.7379 62.2388 32.4687C60.8188 36.1995 58.4743 39.7138 55.2052 43.0115L55.1061 43.1115L55.0071 43.2114L56.0968 48.7077C56.1958 49.2073 56.1711 49.6903 56.0225 50.1567C55.8739 50.623 55.618 51.0394 55.2547 51.4058L46.7848 60L42.5745 50.1067L34.1541 41.6125L24.3467 37.3654L32.8662 28.8212C33.2295 28.4547 33.6422 28.1966 34.1045 28.0467C34.5668 27.8968 35.0457 27.8718 35.541 27.9717L40.9895 29.071C41.0225 29.0377 41.0555 29.0127 41.0886 28.996C41.1216 28.9794 41.1546 28.9544 41.1876 28.9211C44.4567 25.6233 47.9405 23.2499 51.6389 21.8009C55.3373 20.3519 59.4319 19.7773 63.9228 20.0771ZM27.6654 47.6584C28.8211 46.4925 30.2328 45.9012 31.9004 45.8846C33.5679 45.8679 34.9796 46.4425 36.1354 47.6084C37.2911 48.7743 37.8607 50.1983 37.8442 51.8805C37.8277 53.5627 37.2416 54.9867 36.0858 56.1526C35.2273 57.0187 33.8982 57.7349 32.0985 58.3012C30.2988 58.8674 27.5993 59.4004 24 59.9001C24.4953 56.2692 25.0154 53.5377 25.5603 51.7056C26.1051 49.8735 26.8068 48.5245 27.6654 47.6584ZM29.7457 49.8069C29.2834 50.3066 28.8707 51.0894 28.5074 52.1553C28.1442 53.2213 27.8305 54.587 27.5663 56.2525C29.2174 55.9861 30.5713 55.6696 31.6279 55.3032C32.6846 54.9368 33.4606 54.5204 33.9559 54.054C34.5834 53.4878 34.9053 52.7799 34.9218 51.9305C34.9383 51.0811 34.6494 50.3399 34.055 49.707C33.4276 49.1074 32.6929 48.8159 31.8508 48.8326C31.0088 48.8492 30.3071 49.174 29.7457 49.8069Z" fill="#565656"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_1_2" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+                    </filter>
+                    <radialGradient id="paint0_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(44 40) rotate(90) scale(40)">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="#999999"/>
+                    </radialGradient>
+                    </defs>
+                    </svg>
+                        <h3 class="title-grid">Déploiement</h3>
+                        <p class="text-grid">Recevez votre site clé en main prêt à convertir</p>
+                    </div>
+                    <div class="div5-right">
+                        <div class="portfolio-carousel">
+                            <div class="portfolio-track">
+                                <div class="portfolio-item">
+                                    <img src="./images/nutrition-antifragile.png" alt="Nutrition Antifragile">
+                                </div>
+                                <div class="portfolio-item">
+                                    <img src="./images/portefolio.png" alt="Portfolio">
+                                </div>
+                                <div class="portfolio-item">
+                                    <img src="./images/saveurdumonde.png" alt="Saveur du Monde">
+                                </div>
+                                <div class="portfolio-item">
+                                    <img src="./images/nutrition-antifragile.png" alt="Nutrition Antifragile">
+                                </div>
+                                <div class="portfolio-item">
+                                    <img src="./images/portefolio.png" alt="Portfolio">
+                                </div>
+                                <div class="portfolio-item">
+                                    <img src="./images/saveurdumonde.png" alt="Saveur du Monde">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="parent-mobile">
-    <!-- Div 1 -->
-            <div class="div1">
-                <p class="text-grid-main">
-            Nous ne faisons pas que créer des sites:<br>
-            nous créons des <strong>expériences.</strong>
-             </p>
+        </section>
+        <section id="realisations">
+            <h2 class="title">Decouvrez nos dernières <span class="text-italic-48">Réalisations</span></h2>
+            <div>
+                <div class="container-realisation">
+                    <div class="image-container">
+                        <img src="./images/nutrition-antifragile.png" alt="Nutrition Antifragile">
+                    </div>
+                    <div>
+                        <div class="text-container">  
+                            <h3 class="name-site">Nutrition Antifragile</h3>
+                            <p class="text-site">Nutrition Antifragile est un site dédié à mieux comprendre l’alimentation moderne et à aider chacun à développer une nutrition plus consciente, efficace et durable.L’objectif : simplifier la science, dévoiler les mécanismes de l’industrie et donner des repères fiables pour devenir plus autonome face à son alimentation.</p>
+                            <div>
+                             <button class="cta-button" onclick="window.location.href='contact.html'">Voir le site</button>
+                        </div>
+                        </div>
+                        
+                      
+                    </div>
+                </div>
+                <div class="container-realisation">
+                    <div class="image-container">
+                        <img src="./images/italien.png" alt="Bella Italia">
+                    </div>
+                    <div>
+                        <div class="text-container">  
+                            <h3 class="name-site">Restaurant Bella Italia</h3>
+                            <p class="text-site">Bella Italia est un restaurant italien chaleureux qui célèbre la cuisine traditionnelle avec des ingrédients frais, des saveurs authentiques et des recettes inspirées des régions d’Italie.
+                            Un lieu où l’on profite de plats faits maison, d’une ambiance conviviale et d’un véritable voyage culinaire au cœur de l’Italie.</p>
+                            <div>
+                             <button class="cta-button" onclick="window.location.href='contact.html'">Voir le site</button>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
             </div>
-
-    <!-- Wrapper Div 2 et Div 3 pour mobile -->
-    <div class="div2-div3-wrapper">
-        <div class="div2">
-            <p class="text-grid">L’art de convertir simplement.</p>
-            <img src="./images/chart.gif" alt="chart" width="100" height="100">
-        </div>
-        <div class="div3">
-            <p class="text-grid">Donner vie à vos idées.</p>
-            <div id="carousel-mobile"></div>
-        </div>
-    </div>
-
-    <!-- Div 4 -->
-    <div class="div4">
-        <h1 class="text-gradient">Transformez vos idées <br>en réalité</h1>
-        <button class="cta-button" onclick="window.location.href='contact.html'">Demander un devis</button>
-    </div>
-
-    <!-- Div 5 -->
-    <div class="div5">
-        <!-- Contenu ou image -->
-    </div>
-</div>
-
+        </section>
+        <section class="testimonial">
+            <h2 class="title">Ce que disent nos <span class="text-italic-48">clients</span></h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial-track">
+                        <div class="testimonial-item active">
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"NOZOMI a créé un site web exceptionnel pour notre restaurant. Le design est magnifique et nos réservations ont augmenté de 40% depuis le lancement. Une équipe professionnelle et à l'écoute !"</p>
+                                <div class="testimonial-author">
+                                    <h4>Maria Rossi</h4>
+                                    <span>Propriétaire - Bella Italia</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"Grâce à NOZOMI, notre site e-commerce est devenu un vrai moteur de ventes. L'interface est intuitive et nos clients adorent naviguer sur le site. Un travail remarquable !"</p>
+                                <div class="testimonial-author">
+                                    <h4>Thomas Martin</h4>
+                                    <span>Directeur - TechStore</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"Une landing page qui convertit vraiment ! NOZOMI a su capter l'essence de notre marque et créer une expérience utilisateur parfaite. Nos leads ont triplé en 2 mois."</p>
+                                <div class="testimonial-author">
+                                    <h4>Sophie Dubois</h4>
+                                    <span>Marketing Manager - NutriVital</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-text">"Un site vitrine élégant qui reflète parfaitement notre expertise. NOZOMI a su traduire notre vision en un site web moderne et efficace. Excellent travail !"</p>
+                                <div class="testimonial-author">
+                                    <h4>Alexandre Petit</h4>
+                                    <span>Fondateur - Design Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+            </div>
         </section>
         <section class="devis-section">
             <h1 class="title-devis"></h1>
@@ -165,7 +354,7 @@
                         </g>
                     </svg>
 
-                    <h1 class="text-devis">NOZOMI</h1>
+                    <h3 class="text-devis">NOZOMI</h3>
                     <p class="text-grid">Chez NOZOMI, nous créons des sites web modernes et efficaces pour aider entrepreneurs et marques à briller en ligne. Design soigné, performance et accompagnement : notre mission est de faire de votre présence digitale un vrai levier de croissance.</p>
             </div>
             <div class="question-container">
@@ -214,8 +403,9 @@
             <button class="cta-button" onclick="window.location.href='contact.html'">Demander un devis</button>
         </section>
         <!-- Début de widget en ligne Calendly -->
-         <div class="calendly-inline-widget" data-url="https://calendly.com/thongkhamdyjarod" style="min-width:320px;height:700px;"></div>
-         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+         <!-- Début de widget en ligne Calendly -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/thongkhamdyjarod/30min" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Fin de widget en ligne Calendly -->
         
 <footer>

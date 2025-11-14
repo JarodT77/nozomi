@@ -3,6 +3,12 @@ html, body {
   overflow-x: hidden;
 }
 
+.container-hero {
+  border-radius: 30px;
+  border: solid 3px #cccccc;
+  margin: 20px;
+}
+
 .social-icon {
     width: 30px;
     height: 30px;
@@ -34,7 +40,7 @@ button:hover {
   width: 30px;
   height: 4px;
   margin: 5px 0;
-  background: white;
+  background: rgb(0, 0, 0);
   border-radius: 2px;
   transition: 0.3s;
 }
@@ -139,16 +145,6 @@ width: 600px;
 
 /* Appliquer la police au body */
 body {
-    background: radial-gradient(
-        circle at top,
-        rgb(80, 0, 150) 0%,
-        rgb(50, 0, 91) 20%,
-        rgb(35, 0, 64) 50%,
-
-        rgb(20, 20, 20) 100%
-
-
-    );
         margin: 0px;
 }
 
@@ -186,7 +182,7 @@ strong {
 
 .logo {
     font-family: 'SFBold', sans-serif;
-      background: linear-gradient(to left, rgb(129, 49, 134) 0%, rgb(240, 124, 255) 30%, rgb(255, 205, 255) 65%, rgb(187, 0, 255) 100%);
+     background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
      -webkit-background-clip: text; /* pour Chrome/Safari */
       -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
       background-clip: text; /* standard */
@@ -206,7 +202,7 @@ strong {
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'SFRegular';
     font-size: 18x;
 }
@@ -219,27 +215,51 @@ a {
 .hero {
     text-align: center;
     animation: fadeIn 2s ease-in;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    max-width: 1100px;
+    margin-inline: auto;
 }
 
 .hero-title {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'SFBold';
-    font-size: 120px;
-    margin-top: 100px;
+    font-size: 64px;
+    margin-top: 80px;
+}
+
+.text-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: black;
+    font-size: 64px;
+    font-weight: 400;
+}
+.text-italic-48 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: black;
+    font-size: 48px;
+    font-weight: 400;
+}
+.text-italic-36 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: white;
+    font-size: 36px;
+    font-weight: 400;
 }
 .hero-text {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'SFRegular', sans-serif;
-    font-size: 48px;
+    font-size: 32px;
 }
 .cta-button {
     display: inline-block;
-    padding-inline: 20px;
+    padding-inline: 30px;
     padding-block: 10px;
-    background-color: transparent;
-    color: white;
-    border: solid 1px white;
+    background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
+    color: rgb(255, 255, 255);
+    border: none;
     border-radius: 50px;
     cursor: pointer;
     text-align: center;/* Centrer le texte */
@@ -248,10 +268,42 @@ a {
     font-size: 28px;
 }
 
+.benefice-text {
+    margin-top: 80px;
+}
+
+.benefice-text ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefice-text li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.benefice-text span {
+    color: #333;
+    font-family: 'SFRegular', sans-serif;
+    font-size: 18px;
+}
+
+.benefice-text svg {
+    color: #28a745;
+    flex-shrink: 0;
+}
+
 .title {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'SFBold', sans-serif;
-    font-size: 62px;
+    font-size: 48px;
     margin-top: 50px;
     text-align: center;
     margin-bottom: 100px;
@@ -261,10 +313,10 @@ a {
 display: grid;
 grid-template-columns: repeat(6, 1fr);
 grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 10px;
+grid-column-gap: 20px;
+grid-row-gap: 20px;
 text-align: center;
-max-width: 90rem;
+max-width: 100rem;
 margin: 0 auto;
 max-height: 60rem;
 margin-bottom: 100px;
@@ -293,18 +345,13 @@ margin-bottom: 100px;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
+    padding-block: 40px;
+    min-height: 150px;
 
     /* Fond translucide */
-    background: rgba(0, 0, 0, 0.027);
+     background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
 
-    /* Bordure lumineuse */
-
-
-    /* Flou et saturation derrière */
-    backdrop-filter: blur(25px) saturate(150%);
-    -webkit-backdrop-filter: blur(25px) saturate(150%);
-
-    /* Reflet interne pour “liquid” */
+    /* Reflet interne pour "liquid" */
     box-shadow:
       0 4px 30px rgba(0, 0, 0, 0.2),
       inset 0 0 25px rgba(245, 245, 245, 0.188);
@@ -330,14 +377,7 @@ span {
     justify-content: center;
     align-items: center;
     border-radius:40px;
-     background: rgba(84, 84, 84, 0.027);
-
-    /* Bordure lumineuse */
-
-
-    /* Flou et saturation derrière */
-    backdrop-filter: blur(25px) saturate(150%);
-    -webkit-backdrop-filter: blur(25px) saturate(150%);
+    background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
 
     /* Reflet interne pour “liquid” */
     box-shadow:
@@ -358,14 +398,7 @@ span {
     justify-content: center;
     align-items: center;
     border-radius:40px;
-     background: rgba(84, 84, 84, 0.027);
-
-    /* Bordure lumineuse */
-  
-
-    /* Flou et saturation derrière */
-    backdrop-filter: blur(25px) saturate(150%);
-    -webkit-backdrop-filter: blur(25px) saturate(150%);
+    background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
 
     /* Reflet interne pour “liquid” */
     box-shadow:
@@ -386,7 +419,7 @@ span {
     justify-content: center;
     align-items: center;
     border-radius:40px;
-     background: rgba(84, 84, 84, 0.027);
+    background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
 
     /* Bordure lumineuse */
 
@@ -406,18 +439,69 @@ span {
     animation: slideInRight 2s cubic-bezier(.77,0,.18,1) both; 
     animation-delay: 2s;
 }
+
+.div5-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div5-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.portfolio-carousel {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.portfolio-track {
+    display: flex;
+    flex-direction: column;
+    animation: scrollVertical 15s linear infinite;
+    height: calc(200% + 150px);
+}
+
+.portfolio-item {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+@keyframes scrollVertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
 .div5 { 
     grid-area: 4 / 1 / 6 / 5; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius:40px;
-     background: rgba(84, 84, 84, 0.027);
+    flex-direction: row;
+    gap: 30px;
+    border-radius: 40px;
+    background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
+    padding: 30px;
 
     /* Bordure lumineuse */
    
@@ -438,45 +522,38 @@ span {
     animation-delay: 2.30s;
 }
 
-/* Make images in the grid fill their cell and show the top */
-.div5 {
-  display: block; /* ensure block-level for sizing */
-  position: relative;
-  overflow: hidden; /* crop the image to the container */
-}
-.div5 .image-grid {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* fill the box */
-  object-position: top center; /* show the top of the image */
-  display: block;
-}
-
 .title-grid {
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'SFBold', sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     margin-top: 20px;
 }
 .text-grid {
 
     color: white;
     font-family: 'SFRegular';
-    font-size: 32px;
+    font-size: 24px;
     margin: 20px;
 }
 
 .text-grid-main {
-
     color: white;
     font-family: 'SFRegular', sans-serif;
-    font-size: 48px;
-    margin: 20px;
-    padding-top: 20px;
+    font-size: 36px;
+}
+.p-grid-main {
+    color: white;
+    font-family: 'SFRegular', sans-serif;
+    font-size: 24px;
+    max-width: 1100px;
+}
+
+.p-grid-main.no-spacing {
+    margin-top: -10px;
 }
 
 .text-gradient {
-    background: linear-gradient(to left, rgb(129, 49, 134) 0%, rgb(240, 124, 255) 30%, rgb(255, 205, 255) 65%, rgb(187, 0, 255) 100%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0), #132042), linear-gradient(#8648dd, #d4c1fa);
      -webkit-background-clip: text; /* pour Chrome/Safari */
       -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
       background-clip: text; /* standard */
@@ -505,7 +582,7 @@ span {
 
 
 .text-devis {
-      background: linear-gradient(to left, rgb(129, 49, 134) 0%, rgb(240, 124, 255) 30%, rgb(255, 205, 255) 65%, rgb(187, 0, 255) 100%);
+      background: radial-gradient(circle, rgba(0, 0, 0, 0), #132042), linear-gradient(#3d417b, #999efa);
      -webkit-background-clip: text; /* pour Chrome/Safari */
       -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
       background-clip: text; /* standard */
@@ -542,15 +619,8 @@ span {
         padding: 50px;
 
 
-    /* Fond translucide */
-        background: rgba(84, 84, 84, 0.027);
+        background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
 
-    /* Bordure lumineuse */
-
-
-    /* Flou et saturation derrière */
-        backdrop-filter: blur(25px) saturate(150%);
-        -webkit-backdrop-filter: blur(25px) saturate(150%);
 
     /* Reflet interne pour “liquid” */
         box-shadow:
@@ -565,7 +635,7 @@ span {
         margin-bottom: 20px;
         gap: 10px;
         max-width: 50rem;
-        border-bottom: solid 1px rgb(75, 33, 78);
+        border-bottom: solid 1px rgb(113, 113, 113);
         
 
     /* Bordure lumineuse */
@@ -695,10 +765,54 @@ span {
   font-weight: bold;
 }
 
+.container-realisation {
+    background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
+    margin-bottom: 50px;
+    padding: 40px;
+    max-width: 75rem;
+    margin-inline: auto;
+    border-radius: 40px;
+}
+
+
+
+.image-container img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    border-radius: 30px;
+}
+
+.name-site {
+  font-family: 'SFBold', sans-serif;  
+  font-size: 36px;
+  background: linear-gradient(to left, rgb(42, 42, 42) 0%, rgb(190, 190, 190) 50%,  rgb(255, 255, 255) 100%);
+  -webkit-background-clip: text; /* pour Chrome/Safari */
+  -webkit-text-fill-color: transparent; /* rend le texte transparent pour voir le gradient */
+  background-clip: text; /* standard */
+  color: transparent; /* sécurité */
+}
+.text-site {
+    font-family: 'SFRegular', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+.text-container {
+   background: radial-gradient(circle, #1b1237, #21103f74);
+   padding:20px;
+   border-radius: 30px ;
+   margin-top: 10px;
+}
+
 @media (max-width: 768px) {
     
     body {
         overflow-x: hidden; 
+    }
+    .container-hero {
+        border: none;
+        margin: none;
     }
     .hero {
         margin-inline: 20px;
@@ -734,59 +848,27 @@ span {
   }
 
   .hero-title {
-    font-size: 48px;
+    font-size: 36px;
   }
+  .text-italic {
+        font-size: 36px;
+    }
+
     .hero-text {
-        font-size: 28px;
+        font-size: 24px;
     }
     .title {
-        font-size: 42px;
+        font-size: 32px;
         margin-inline: 20px;
     }
-    .parent {
-        display: none;
+
+    .text-italic-48 {
+        font-size: 32px;
     }
+
 
     .services {
         margin-inline: 20px;
-    }
- .parent-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* espace entre les divs */
-    max-width: 100%;
-    max-height: none;
-    margin-bottom: 50px;
-    text-align: center;
-  }
-
-  .div1 {
-    padding-bottom: 20px;
-  }
-
-  .div1, .div4, .div5 {
-    width: 100%;
-  }
-
-  /* Wrapper pour div2 et div3 côte à côte */
-  .div2-div3-wrapper {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .div2, .div3 {
-    flex: 1; /* chacune prend 50% */
-    padding-bottom: 20px;
-    
-  }
-
-  .div4{
-    padding-bottom: 20px;
-  }
-    .div5 {
-        height: 250px;
-        margin-top: 20px;
     }
 
   .slider {
@@ -795,12 +877,75 @@ span {
   .slide img {
         width: 60px;
     }
+    .parent {
+        display: flex;
+        flex-direction: column;
+        margin-inline: 10px;
+        gap: 30px;
+        max-height: none;
+    }
+
+    .p-grid-main {
+        font-size: 16px;
+        padding-top: 20px;
+    }
+    
+    .div1, .div2, .div3, .div4 {
+        padding: 25px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .div1 h3, .div2 h3, .div3 h3, .div4 h3 {
+        margin: 10px 0;
+    }
+    
+    .div1 p, .div2 p, .div3 p, .div4 p {
+        margin: 10px 15px;
+        text-align: center;
+    }
+    
+    .div5 {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+    
+    .portfolio-carousel {
+        height: 200px;
+    }
+    
+    .portfolio-track {
+        flex-direction: row !important;
+        animation: scrollHorizontal 15s linear infinite !important;
+        height: 200px !important;
+        width: calc(200% + 40px);
+    }
+    
+    .portfolio-item {
+        width: 250px;
+        height: 180px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    
+    @keyframes scrollHorizontal {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
     
     .title-grid {
         font-size: 28px;
     }       
     .text-grid {
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
     }
     .text-grid-main {
@@ -849,6 +994,22 @@ span {
     padding-top: 0px;
   }
 
+  .name-site {
+    font-size: 24px;
+  }
+  .text-site {
+    font-size: 16px;
+  }
+
+  .image-container img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .container-realisation {
+    margin-inline: 10px;
+  }
+
 }
 
 /* Pricing Grid Styles */
@@ -861,8 +1022,8 @@ span {
 }
 
 .pricing-card {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  border: 2px solid #333;
+  background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
+  border: 1px solid #333;
   border-radius: 20px;
   padding: 40px 30px;
   text-align: center;
@@ -879,8 +1040,8 @@ span {
 }
 
 .pricing-card.featured {
-  border-color: #9000ff;
-  background: linear-gradient(135deg, #2d1b69 0%, #1a1a1a 100%);
+  border-color: #000000;
+  background: linear-gradient(135deg, #170e34 0%, #182346 100%);
   transform: scale(1.05);
 }
 
@@ -889,7 +1050,7 @@ span {
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(45deg, #9000ff, #ff0080);
+  background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
   color: white;
   padding: 8px 20px;
   border-radius: 20px;
@@ -900,11 +1061,10 @@ span {
 }
 
 .pricing-title {
-  color: #9000ff;
   font-size: 42px;
   font-weight: bold;
   margin-bottom: 15px;
-  background: linear-gradient(45deg, #9000ff, #ff0080);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0), #132042), linear-gradient(#3d417b, #999efa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -933,7 +1093,7 @@ span {
 }
 
 .price-amount {
-  color: #9000ff;
+  color: #ffffff;
   font-size: 42px;
   font-weight: bold;
   display: inline;
@@ -1009,5 +1169,195 @@ span {
   
   .pricing-features li {
     font-size: 14px;
+  }
+}
+
+/* Testimonial Slider Styles */
+.testimonial {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonial .title {
+  color: black;
+  margin-bottom: 60px;
+}
+
+.testimonial-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-container {
+  overflow: hidden;
+  border-radius: 30px;
+  background: radial-gradient(circle, #0003, #0000), linear-gradient(#0c0e2e, #77788b);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2), inset 0 0 25px rgba(245, 245, 245, 0.188);
+  position: relative;
+  height: 300px;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%;
+}
+
+.testimonial-item {
+  min-width: 100%;
+  flex-shrink: 0;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 30px;
+  letter-spacing: 4px;
+}
+
+.testimonial-text {
+  font-family: 'SFRegular', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.testimonial-author h4 {
+  font-family: 'SFBold', sans-serif;
+  font-size: 18px;
+  color: white;
+  margin: 0 0 8px 0;
+}
+
+.testimonial-author span {
+  font-family: 'SFRegular', sans-serif;
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: linear-gradient(45deg, #9000ff, #ff0080);
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile responsive for testimonials */
+@media (max-width: 768px) {
+  .testimonial {
+    padding: 30px 10px;
+  }
+  
+  .testimonial-slider {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .testimonial-container {
+    height: auto;
+    min-height: 280px;
+  }
+  
+  .testimonial-item {
+    padding: 30px 15px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .testimonial-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .testimonial-text {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100%;
+  }
+  
+  .testimonial-author {
+    text-align: center !important;
+    width: 100%;
+    margin: 20px auto 0 auto;
+  }
+  
+  .testimonial-author h4 {
+    font-size: 16px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100%;
+  }
+  
+  .testimonial-author span {
+    font-size: 14px !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .stars {
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+    width: 100%;
+  }
+  
+  .testimonial-dots {
+    margin-top: 25px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 }
