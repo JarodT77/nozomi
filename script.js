@@ -13,12 +13,41 @@ document.addEventListener('DOMContentLoaded', function() {
         const target = document.querySelector('.services');
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       }
-       if (href === '.nav-center') {
+      if (href === '.nav-center') {
         e.preventDefault();
         const target = document.querySelector('.services');
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       }
+      if (href === 'contact.html') {
+        e.preventDefault();
+        scrollToContact();
+      }
     });
+  });
+});
+
+// Function to scroll to contact form
+function scrollToContact() {
+  const contactSection = document.querySelector('.contact-section');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// Add scroll to contact functionality to all CTA buttons
+document.addEventListener('DOMContentLoaded', function() {
+  const ctaButtons = document.querySelectorAll('.cta-button');
+  ctaButtons.forEach(button => {
+    const buttonText = button.textContent.trim().toLowerCase();
+    // Target buttons with specific text content
+    if (buttonText.includes('demander un devis') || 
+        buttonText.includes('nous contacter') || 
+        buttonText.includes('voir le site')) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToContact();
+      });
+    }
   });
 });
 // Burger menu JS
