@@ -57,10 +57,34 @@ document.addEventListener('DOMContentLoaded', function() {
   if (burger && navLinks) {
     burger.addEventListener('click', function() {
       navLinks.classList.toggle('open');
+      burger.classList.toggle('open');
       const expanded = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', !expanded);
+      burger.setAttribute('aria-expanded', String(!expanded));
+    });
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
     });
   }
+});
+
+// Scroll reveal
+document.addEventListener('DOMContentLoaded', function() {
+  const revealEls = document.querySelectorAll('.reveal');
+  if (!revealEls.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
 });
 const questions = document.querySelectorAll('.faq-question');
 
